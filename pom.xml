@@ -48,6 +48,17 @@
             <version>[1.6,)</version>
         </dependency>
 
+        <!--
+             the Spring Context Indexer run an annotation processor at compile time and generates
+             a META-INF/spring.components file that Spring can use to speed up component scanning at boot time.
+             For small applications, this doesn't make a big difference. However, for large applications with
+             complex dependencies this may improve your cold start time significantly.
+        -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context-indexer</artifactId>
+            <optional>true</optional>
+        </dependency>
         <!-- https://mvnrepository.com/artifact/io.symphonia/lambda-logging -->
         <dependency>
             <groupId>io.symphonia</groupId>
