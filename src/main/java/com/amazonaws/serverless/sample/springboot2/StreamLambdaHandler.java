@@ -3,9 +3,12 @@ package com.amazonaws.serverless.sample.springboot2;
 
 import com.amazonaws.serverless.exceptions.ContainerInitializationException;
 import com.amazonaws.serverless.proxy.internal.testutils.Timer;
+
 import com.amazonaws.serverless.proxy.model.AwsProxyRequest;
 import com.amazonaws.serverless.proxy.model.AwsProxyResponse;
+
 import com.amazonaws.serverless.proxy.spring.SpringBootLambdaContainerHandler;
+
 import com.amazonaws.serverless.sample.springboot2.filter.CognitoIdentityFilter;
 import com.amazonaws.services.lambda.runtime.Context;
 import com.amazonaws.services.lambda.runtime.RequestStreamHandler;
@@ -20,17 +23,17 @@ import java.util.EnumSet;
 
 
 public class StreamLambdaHandler implements RequestStreamHandler {
-    private static SpringBootLambdaContainerHandler<AwsProxyRequest, AwsProxyResponse> handler;
+    public static SpringBootLambdaContainerHandler<AwsProxyRequest, AwsProxyResponse> handler;
     static {
         try {
             handler = SpringBootLambdaContainerHandler.getAwsProxyHandler(Application.class);
 
             // For applications that take longer than 10 seconds to start, use the async builder:
-            // handler = new SpringBootProxyHandlerBuilder<AwsProxyRequest>()
-            //                    .defaultProxy()
-            //                    .asyncInit()
-            //                    .springBootApplication(Application.class)
-            //                    .buildAndInitialize();
+//             handler = new SpringBootProxyHandlerBuilder<AwsProxyRequest>()
+//                                .defaultProxy()
+//                                .asyncInit()
+//                                .springBootApplication(Application.class)
+//                                .buildAndInitialize();
 
             // we use the onStartup method of the handler to register our custom filter
             handler.onStartup(servletContext -> {
