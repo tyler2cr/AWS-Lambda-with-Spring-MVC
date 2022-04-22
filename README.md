@@ -1,5 +1,6 @@
 
----
+This project was initially cloned from  
+[awslabs/aws-serverless-java-container "Serverless Spring Boot 2 example"](https://github.com/awslabs/aws-serverless-java-container/blob/6d88f503c02988cc947743bad78d965d8aa0b5a2/samples/springboot2/pet-store/README.md)
 
 # Serverless Spring Boot 2 example
 A basic pet store written with the [Spring Boot 2 framework](https://projects.spring.io/spring-boot/). The `StreamLambdaHandler` object is the main entry point for Lambda.
@@ -40,11 +41,17 @@ $ curl https://xxxxxxxxxx.execute-api.us-west-2.amazonaws.com/pets
 
 ---
 
+# Cold starts
+- [AWS Blog on optimizing cold starts (language-agnostic)](https://aws.amazon.com/blogs/compute/operating-lambda-performance-optimization-part-1/)
+- [Spring-specific optimization for cold start times](https://github.com/awslabs/aws-serverless-java-container/wiki/Quick-start---Spring-Boot2#optimizing-cold-start-times)
+
+
 # See also
 
 [Wiki - aws-serverless-java-container](https://github.com/awslabs/aws-serverless-java-container/wiki)
 
 [Quick-start---Spring-Boot2](https://github.com/awslabs/aws-serverless-java-container/wiki/Quick-start---Spring-Boot2)
+- [Optimizing cold start times](https://github.com/awslabs/aws-serverless-java-container/wiki/Quick-start---Spring-Boot2#optimizing-cold-start-times)
 
-This project was initially cloned from  
-[awslabs/aws-serverless-java-container "Serverless Spring Boot 2 example"](https://github.com/awslabs/aws-serverless-java-container/tree/main/samples/springboot2/pet-store)
+
+
