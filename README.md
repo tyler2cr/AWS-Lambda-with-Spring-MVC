@@ -1,6 +1,5 @@
----
 
-Cloned from [awslabs/aws-serverless-java-container "Serverless Spring Boot 2 example"](https://github.com/awslabs/aws-serverless-java-container/tree/main/samples/springboot2/pet-store)
+---
 
 # Serverless Spring Boot 2 example
 A basic pet store written with the [Spring Boot 2 framework](https://projects.spring.io/spring-boot/). The `StreamLambdaHandler` object is the main entry point for Lambda.
@@ -46,3 +45,6 @@ $ curl https://xxxxxxxxxx.execute-api.us-west-2.amazonaws.com/pets
 [Wiki - aws-serverless-java-container](https://github.com/awslabs/aws-serverless-java-container/wiki)
 
 [Quick-start---Spring-Boot2](https://github.com/awslabs/aws-serverless-java-container/wiki/Quick-start---Spring-Boot2)
+
+This project was initially cloned from  
+[awslabs/aws-serverless-java-container "Serverless Spring Boot 2 example"](https://github.com/awslabs/aws-serverless-java-container/tree/main/samples/springboot2/pet-store)
