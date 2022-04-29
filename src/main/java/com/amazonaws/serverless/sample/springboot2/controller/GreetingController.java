@@ -10,20 +10,20 @@
  * OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions
  * and limitations under the License.
  */
-package com.amazonaws.serverless.sample.springboot2.model;
+package com.amazonaws.serverless.sample.springboot2.controller;
 
-public class Error {
-    private String message;
 
-    public Error(String errorMessage) {
-        message = errorMessage;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+
+@RestController
+public class GreetingController {
+
+
+    @GetMapping("/hello")
+    public String hello() {
+        return "hello";
     }
 
-    public String getMessage() {
-        return message;
-    }
-
-    public void setMessage(String message) {
-        this.message = message;
-    }
 }
